@@ -1,4 +1,4 @@
-Selling Laptops: Smart Marketing
+# Selling Laptops: Smart Marketing
 
 ## Overview
 

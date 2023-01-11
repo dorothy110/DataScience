@@ -1,4 +1,4 @@
-# Project 4: Building a Data Website
+#  Building a Data Website
 
 ## Overview
 
@@ -12,10 +12,7 @@ donation page that is optimized via A/B testing, and (4) a subscribe
 button that only accepts valid email addresses.
 
 
-Consider watching this [P4 Tips and Tricks](https://mediaspace.wisc.edu/media/CS%20320%20-%20P4%20Tips%20and%20Tricks/1_wvd58pcp) video, which Garrison kindly volunteered to record.
-
 ## Setup
-
 
 ```
 pip3 install Flask lxml html5lib beautifulsoup4

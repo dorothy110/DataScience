@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      function subscribe() {
+        var email = prompt("What is your email?", "????");
+
+        $.post({
+          type: "POST",
+          url: "email",
+          data: email,
+          contentType: "application/text; charset=utf-8",
+          dataType: "json"
+        }).done(function(data) {
+          alert(data);
+        }).fail(function(data) {
+          alert("POST failed");
+        });
+      }
+        
+      
+    </script>
+  </head>    
+  <body bgcolor =  lightblue>
+    <h1>Welcome! This is homepage</h1>
+    <div>
+        <li><a href="browse.html">Browse</a></li>
+<!--         1. using hyper link -->
+        <li><a style="color:replace" href="x">donate</a></li>
+<!--         2. using button -->
+<!--         <button onclick ="window.location.href='x';" > donate</button> -->
+    </div>
+
+     <h3> plot1:histogram</h3>
+     <img src="dashboard_1.svg"><br><br>
+     <h3> plot2:bar chart</h3>
+     <img src="dashboard_1.svg?type=bar"><br><br>
+     <h3> plot3:lines</h3>
+     <img src="dashboard_2.svg"><br><br>
+    <p>Enjoy the data.</p>
+      
+    <button onclick="subscribe()">Subscribe</button>
+  </body>
+</html>

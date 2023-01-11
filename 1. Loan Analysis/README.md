@@ -31,9 +31,9 @@ Things I will practice:
 
 Results will be in 4 files:
 * p2.ipynb
-* loans.py (first module developed in lab)
+* loans.py 
 * module_tester.py
-* search.py (second module developed in lab)
+* search.py 
 
 ## First Home Bank Analysis
 

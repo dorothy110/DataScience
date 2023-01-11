@@ -27,7 +27,7 @@ Be sure to run `python3 tester.py` regularly to estimate your grade. As in Proje
 
 ## Submission
 
-You'll hand in two files:
+My answers are in two files:
 
 - `p5.ipynb`
 - `edgar_utils.py`

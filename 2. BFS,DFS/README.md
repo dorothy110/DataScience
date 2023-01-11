@@ -13,6 +13,11 @@ scraping. `scrape.py`.
 * WebSearcher (a class)
 * reveal_secrets (a function)
 
+```
+
+```
+
+
 
 ## Part 1: Base Class `GraphSearcher` and DFS on Matrices (`MatrixSearcher`)
 
@@ -60,6 +65,13 @@ example, `1.txt` contains this:
 ```
 M
 2.txt,4.txt
+```
+
+```
+#p3.ipynb
+import scrape
+f = scrape.FileSearcher()
+print(f.visit_and_get_children("1.txt"), f.order, f.concat_order())
 ```
 
 This means the value for node `1.txt` is "M", and the children of
@@ -235,6 +247,24 @@ Write a function (remember that functions aren't inside any class) in
 ```python
 def reveal_secrets(driver, url, travellog):
     ....
+```
+
+```
+#generate a password from the "clues" column of the travellog DataFrame.
+#For example, if travellog is the big DataFrame built after doing BFS 
+#(as shown earlier), the password will start with "17138..."   
+
+ser1 = s.table()
+string = ""
+for i in range(len(ser1)):
+    string += str(ser1["clue"][i])
+string
+
+url = "http://34.71.246.126:5000"
+
+scrape.reveal_secrets(driver, url,s.table())
+
+##password: 1713852459415326
 ```
 
 The function should do the following:

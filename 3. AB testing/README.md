@@ -1,21 +1,14 @@
-# Project 4: Building a Data Website
+# Building a Data Website
 
 ## Overview
 
-In this project, you'll build a website for sharing a dataset -- you
-get to pick the dataset (more on possible sources for data later).
-
-You'll use the flask framework for the site, which will have the
+In this project, I will build a website for sharing a dataset, use the flask framework for the site, which will have the
 following features: (1) multiple plots on the home page, (2) a page
 for browsing through the table behind the plots, (3) a link to a
 donation page that is optimized via A/B testing, and (4) a subscribe
 button that only accepts valid email addresses.
 
-
-Consider watching this [P4 Tips and Tricks](https://mediaspace.wisc.edu/media/CS%20320%20-%20P4%20Tips%20and%20Tricks/1_wvd58pcp) video, which Garrison kindly volunteered to record.
-
 ## Setup
-
 
 ```
 pip3 install Flask lxml html5lib beautifulsoup4
@@ -24,92 +17,33 @@ pip3 install Flask lxml html5lib beautifulsoup4
 
 ## Data
 
-You get to choose the dataset for this project.  Find a CSV you like
-somewhere, then download it as a file named `main.csv`.
-
-The file should have between 10 and 1000 rows and between 3 and 15
-columns.  Feel free to drop rows/columns from your original data
-source if necessary.
-
-**Mandatory**: leave a comment in your `main.py` about the source of
-your data.
-
-If you're looking for dataset ideas, here are a few places to look:
- - https://data-cityofmadison.opendata.arcgis.com
- - https://data.dhsgis.wi.gov/
- - https://www.kaggle.com/datasets
- - https://datasetsearch.research.google.com
 
  I used covid dataset here.
+ It was cleaned and saved in
+ `main.csv`
 
 ## Pages
 
-Your web application should have three pages:
+My web application have three pages:
 * index.html
 * browse.html
 * donate.html
 
-We have some requirements about what is on these, but you have quite a
-bit of creative freedom for this project.
-
-To get started, consider creating a minimal `index.html` file:
-
-```html
-<html>
-  <body>
-    <h1>Welcome!</h1>
-
-    <p>Enjoy the data.</p>
-  </body>
-</html>
+launching my application by running
+```
+ python3 main.py
 ```
 
-Then create a simple flask app in `main.py` with a route for the
-homepage that loads `index.html`:
-
-```python
-import pandas as pd
-from flask import Flask, request, jsonify
-
-app = Flask(__name__)
-# df = pd.read_csv("main.csv")
-
-@app.route('/')
-def home():
-    with open("index.html") as f:
-        html = f.read()
-
-    return html
-
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", debug=True, threaded=False) # don't change this line!
-
-# NOTE: app.run never returns (it runs for ever, unless you kill the process)
-# Thus, don't define any functions after the app.run call, because it will
-# never get that far.
-```
-
-Try launching your application by running `python3 main.py`:
-```
-trh@instance-1:~/p4$ python3 main.py
- * Serving Flask app "main" (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-```
 
 This program runs indefinitely, until you kill it with `CTRL+C`
 (meaning press `CTRL` and `C` at the same time).  Open your web
 browser and go to `http://your-ip:5000` to see your page ("your-ip" is
 the IP you use to SSH to your VM).
 
-Requirements:
 
 * Going to `http://your-ip:port/browse.html` should return the content for `browse.html`, and similarly for the other pages.
-* The index.html page should have hyperlinks to all the other pages.  Be sure to not include your IP here! A relative path is necessary to pass our tests.
-* You should put whatever content you think makes sense on the pages.  Just make sure that they all start with an `<h1>` heading, giving the page a title.
+* The index.html page should have hyperlinks to all the other pages.  
+
 
 ## Browse
 
@@ -123,15 +57,6 @@ The page might look something like this:
 
 <img src="img/browse.png" width=500>
 
-**Hint 1:** you don't necessarily need to have an actual `browse.html`
-file just because there's a `browse.html` page.  For example, here's a
-`hi.html` page without a corresponding `hi.html` file:
-
-```python
-@app.route('/hi.html')
-def hi_handler():
-    return "howdy!"
-```
 
 For browse, instead of returning a hardcoded string, you'll need to
 generate a string containing HTML code for the table, then return that

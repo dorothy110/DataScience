@@ -9,20 +9,8 @@ in it so as not to annoy people that aren't interested.  You're
 looking to use your data about who clicked on similar emails in 2020
 to help you predict which users may be interested in the promotion.
 
-You can decide what features to consider and how to create your
-classifier.  Your grade will correspond to the accuracy of your
-predictions.  50% accuracy and below will give a grade of 0%, whereas
-accuracy of 75% and above will give a grade of 100%; any accuracy
-between 50 and 75 will be rescaled to a 0-100% grade.  Some models can
-get better than 90% accuracy, so we encourage you to keep improving
-your model beyond what is necessary for full credit if you have time.
+create your classifier in a `main.py` file.
 
-You should create your classifier in a `main.py` file, which will be
-the only thing you'll submit.
-
-You can collaborate with your team on the entire project (no
-individual part!).  As usual, you cannot work with anybody outside of
-your team and can only get help from 320 staff.
 
 ## Dataset
 
@@ -145,4 +133,4 @@ scores = cross_val_score(model, train_users[self.xcols], train_y["y"])
 print(f"AVG: {scores.mean()}, STD: {scores.std()}\n")
 ```
 
-  * if you plan to work with your team members (not required, as usual), consider how you may want to divide the work.  One possibility: each team member could try a different model; after comparing them, all team members could submit the one model that scores best.  Alternatively, each team member could be responsible for computing different per-user stats to use as features for training/predicting.  Of course, avoid getting in a situation where you are dependent on any one person to complete the project; this project should be a reasonable amount of work, even for somebody working individually.
+ 

@@ -499,9 +499,7 @@ def reveal_secrets(driver, url, travellog):
 ```
 
 ```
-#generate a password from the "clues" column of the travellog DataFrame.
-#For example, if travellog is the big DataFrame built after doing BFS 
-#(as shown earlier), the password will start with "17138..."   
+#FindthePath.ipynb
 
 ser1 = s.table()
 string = ""

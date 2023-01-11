@@ -1,4 +1,4 @@
-# P5: EDGAR Web Logs
+# EDGAR Web Logs
 
 ## Overview
 

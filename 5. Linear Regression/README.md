@@ -1,4 +1,4 @@
-# Project 6: Regression Models
+# Regression Models
 
 
 ## Overview

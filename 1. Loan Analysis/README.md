@@ -20,19 +20,11 @@ The public HDMA dataset spans all the states and many years, and is documented h
 In this project, I will analyze every loan application made in Wisconsin in
 2020.
 
-Things I will practice:
-* classes
-* large datasets
-* trees
-* testing
-* writing modules
-
 ## Results
 
 Results will be in 4 files:
-* p2.ipynb
+* LoanAnalysis.ipynb
 * loans.py 
-* module_tester.py
 * search.py 
 
 ## First Home Bank Analysis
